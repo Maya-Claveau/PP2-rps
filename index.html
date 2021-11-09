@@ -17,10 +17,41 @@
 <body>
     <h1 class="heading">
         <img class="logo" src="assets/images/rock-paper-scissors-neon-icons-vector.jpg" alt="rps-logo"> 
-        Rock, Paper, Scissors
     </h1>
+
+    <div class="instruction-area">
+        <h2>How to play:</h2>
+        <ol>
+            <li>Choose your move. Meanwhile the computer will make a move at the same time</li>
+            <li>Now you will see who is winning at this round</li>
+            <li>Winning score is updated</li>
+            <li>Winner is determined in a total of 7 rounds</li>            
+        </ol>
+
+    </div>
     
     <div class="game-area">
+        <h2>Round <span class="round-number">x</span></h2>
+        <h3>Player</h3>
+        <div class="option-area">
+            <button class="btn-rock">
+                <i class="far fa-hand-rock"></i>
+            </button>
+            <button class="btn-paper">
+                <i class="far fa-hand-paper"></i>
+            </button>
+            <button class="btn-scissors">
+                <i class="far fa-hand-scissors"></i>
+            </button>
+        </div>
+        <div class="computer-choice">
+            <h3>computer</h3>
+            <span id="operand1">
+                <img src="assets/images/rps-paper.jpg" alt="rock paper scissors paper">
+            </span>
+            <span id="operand2"><img src="assets/images/rps-rock.jpg" alt="rock paper scissors rock"></span>
+            <span id="operand3"><img src="assets/images/rps-scissors.jpg" alt="rock paper scissors scissors"></span>
+        </div>
 
     </div>
 
@@ -28,6 +59,7 @@
         <p class="your-scores">Your Win: <span id="your-score">0</span></p>
         <p class="pc-scores">PC Win: <span id="pc-score">0</span></p>
     </div>
+    <footer><i class="far fa-copyright"></i> Copyright 2021</footer>
     
     
     <!-- font awesome script-->
