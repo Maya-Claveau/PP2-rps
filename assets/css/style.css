@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(to right bottom, #091d43, #21345f, #384c7c, #4f679b, #6682bb, #768ac8, #8892d5, #9a9ae1, #aa8fd8, #ba83ca, #c777b9, #d16ba5);
+    font-family: 'Architects Daughter', cursive;
+    color:#F7FBEA;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+/* logo */
+.logo {
+    width: 50%;
+    height: 50%;
+    margin: 10px;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+.instruction-area {
+    font-size: 110%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.game-area {
+    font-size: 120%;
+}
+
+.option-area button {
+    width: 30%;
+    font-size: 200%;
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.option-area button:hover {
+    background-color: #f0e890;    
+}
+
+.computer-choice img {
+    height: 30%;
+    width: 30%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.score-area {
+    font-size: 120%;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    float: left;
+    margin-top: 20px;
+}
