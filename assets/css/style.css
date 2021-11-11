@@ -75,3 +75,40 @@ footer {
     float: left;
     margin-top: 20px;
 }
+
+/* Media queries */
+/* For large screen size from 1100px width and above*/
+@media screen and (min-width: 1100px) {
+
+    h1 {
+        font-size: 450%;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    .instruction-area {
+        font-size: 150%;
+    }
+
+    .game-area {
+        font-size: 200%;
+        margin-top: 40px;
+    }
+
+    .score-area {
+        font-size: 200%;
+    }
+
+    .option-area button {
+        width: 20%;
+        font-size: 150%;
+    }    
+
+    .computer-choice img {
+        width: 25%;        
+    }
+
+
+}
