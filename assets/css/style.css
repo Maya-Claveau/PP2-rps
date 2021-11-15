@@ -45,16 +45,27 @@ h1 {
     font-size: 120%;
 }
 
+/* buttons */
 .option-area button {
     width: 30%;
     font-size: 200%;
-    border-radius: 7px;
+    border-radius: 50px;
     margin-top: 15px;
     margin-bottom: 25px;
+    text-transform: uppercase;
+    transition: all 0.5s;
 }
 
 .option-area button:hover {
     background-color: #f0e890;    
+}
+
+.option-area button::after {
+    content: attr(data-type);    
+    color: black;
+    position: relative;
+    top: -0.7em;
+    font-size: 0.7rem;
 }
 
 .computer-choice img {
@@ -104,7 +115,12 @@ footer {
     .option-area button {
         width: 20%;
         font-size: 150%;
-    }    
+    }
+
+    .option-area button::after {
+        font-size: 1rem;
+        top: -0.5em;
+    }
 
     .computer-choice img {
         width: 25%;        
