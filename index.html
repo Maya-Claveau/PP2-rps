@@ -16,12 +16,15 @@
 </head>
 <body>
     <header class="header-container">
+
+        <!-- logo and title -->
         <img class="logo" src="assets/images/logo-v4.png" alt="rps-logo">
         <h1 class="heading">        
             Rock, Paper, Scissors!
         </h1>
     </header>
 
+    <!-- instruction of the game -->
     <div class="instruction-area">
         <h2>How to play:</h2>
         <ol>
@@ -33,11 +36,12 @@
 
     </div>
     
+    <!-- display round number and player's choice -->
     <div class="game-area">
-        <h2>Round <span class="round-number">x</span></h2>
+        <h2>Round <span class="round-number">0</span></h2>
         <h3>Player</h3>
         <div class="option-area">
-            <button data-type="rock" class="btn-rock" onClick="displayRandomImage()">
+            <button data-type="rock" class="btn-rock" onClick="displayRandomImage">
                 <i class="far fa-hand-rock"></i>
             </button>
             <button data-type="paper" class="btn-paper" onClick="displayRandomImage()">
@@ -48,29 +52,23 @@
             </button>
         </div>
         
+        <!-- display computer's choice -->
         <div class="computer-choice">
             <h3>Computer</h3>
             <div id="image-container">
                 <img id="image-box" src="assets/images/rock-paper-scissors-logo-Square.png" alt="rock paper scissors pictures">
-            </div>
-            <!-- <span id="operand1">
-                <img src="assets/images/rock-v5.png" alt="rock paper scissors paper">
-            </span>
-            <span id="operand2">
-                <img src="assets/images/paper-v5.png" alt="rock paper scissors rock">
-            </span>
-            <span id="operand3">
-                <img src="assets/images/scissors-v5.png" alt="rock paper scissors scissors">
-            </span> -->
+            </div>            
         </div>
 
     </div>
 
+    <!-- display player and computer scores -->
     <div class="score-area">
-        <p class="your-scores">Your Win: <span id="your-score">0</span></p>
-        <p class="pc-scores">PC Win: <span id="pc-score">0</span></p>
+        <p class="your-scores">Your Win: <span id="player">0</span></p>
+        <p class="pc-scores">PC Win: <span id="pc">0</span></p>
     </div>
 
+    <!-- footer of the page -->
     <footer>
         <i class="far fa-copyright"></i> Copyright 2021
     </footer>

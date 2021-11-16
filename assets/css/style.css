@@ -53,7 +53,7 @@ h1 {
     margin-top: 15px;
     margin-bottom: 25px;
     text-transform: uppercase;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 .option-area button:hover {
@@ -94,8 +94,10 @@ h1 {
 }
 
 #image-box {
-    width: 100px;
-    height: 100px;
+    width: 160px;
+    height: 160px;
+    margin-top: 20px;
+    border-radius: inherit;
 }
 
 .score-area {
@@ -140,7 +142,7 @@ footer {
     #image-box {
         width: 350px;
         height: 350px;
-        margin-top: 20px;
+        margin-top: 25px;
     }
 
     .score-area {
