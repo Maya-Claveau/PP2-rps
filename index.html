@@ -37,20 +37,23 @@
         <h2>Round <span class="round-number">x</span></h2>
         <h3>Player</h3>
         <div class="option-area">
-            <button data-type="rock" class="btn-rock">
+            <button data-type="rock" class="btn-rock" onClick="displayRandomImage()">
                 <i class="far fa-hand-rock"></i>
             </button>
-            <button data-type="paper" class="btn-paper">
+            <button data-type="paper" class="btn-paper" onClick="displayRandomImage()">
                 <i class="far fa-hand-paper"></i>
             </button>
-            <button data-type="scissors" class="btn-scissors">
+            <button data-type="scissors" class="btn-scissors" onClick="displayRandomImage()">
                 <i class="far fa-hand-scissors"></i>
             </button>
         </div>
         
         <div class="computer-choice">
             <h3>Computer</h3>
-            <span id="operand1">
+            <div id="image-container">
+                <img id="image-box" src="assets/images/rock-paper-scissors-logo-Square.png" alt="rock paper scissors pictures">
+            </div>
+            <!-- <span id="operand1">
                 <img src="assets/images/rock-v5.png" alt="rock paper scissors paper">
             </span>
             <span id="operand2">
@@ -58,7 +61,7 @@
             </span>
             <span id="operand3">
                 <img src="assets/images/scissors-v5.png" alt="rock paper scissors scissors">
-            </span>
+            </span> -->
         </div>
 
     </div>

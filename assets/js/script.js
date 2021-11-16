@@ -5,16 +5,34 @@ document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "rock") {
-                alert("You clicked rock button!");                   
-            } else {
-                let gameType = this.getAttribute("data-type");
-                alert(`You clicked ${gameType} button!`);
-            }            
-        })
+        button.addEventListener("click", displayRandomImage)        
+        
+        //    {} if (this.getAttribute("data-type") === "rock") {
+                                                 
+        //     } else {
+        //         let gameType = this.getAttribute("data-type");
+        //         alert(`You clicked ${gameType} button!`);
+        //     }            
+        
     }
-})
+});
+
+
+function displayRandomImage() {
+    // get all the images
+
+    var myPix = ["1.png", "2.png", "3.png"];
+
+    // get a random index
+
+    
+
+    var randomIndex = Math.floor(Math.random() * myPix.length);
+    
+    // display the image
+    document.getElementById("image-box").src = window.location.href + 'assets/images/' + myPix[randomIndex];
+}
+
 
 function runGame() {
 
