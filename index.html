@@ -38,7 +38,7 @@
     
     <!-- display round number and player's choice -->
     <div class="game-area">
-        <h2>Round <span class="round-number">0</span></h2>
+        <h2>Round <span id="round-number">0</span></h2>
         <h3>Player</h3>
         <div class="option-area">
             <button data-type="rock" class="btn-rock" onClick="displayRandomImage">
@@ -65,7 +65,11 @@
     <!-- display player and computer scores -->
     <div class="score-area">
         <p class="your-scores">Your Win: <span id="player">0</span></p>
-        <p class="pc-scores">PC Win: <span id="pc">0</span></p>
+        <p class="pc-scores">PC Win: <span id="computer">0</span></p>
+    </div>
+
+    <div class="gameover-restart-area">
+        <button id="gameover-btn">Good Luck!</button>
     </div>
 
     <!-- footer of the page -->

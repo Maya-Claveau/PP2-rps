@@ -5,25 +5,42 @@ document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
-        button.addEventListener("click", displayRandomImage)        
+        // if (button === document.getElementById("gameover-btn")) {
+        //     // do nothing
+        // } else {
+        button.addEventListener("click", function() {
+            let player = this.getAttribute("data-type");
+            let computer = displayRandomImage();
+            checkWinner(player, computer);
+            incrementRoundNum();
+        })       
     }
+
+    
 });
 
+
+
 /**
- *  display a random image
+ *  display a random image and computer's choice
  */ 
 function displayRandomImage() {
     // get all the images of rock paper and scissors
 
-    let myPix = ["1.png", "2.png", "3.png"];
+    let myPix = ["rock", "paper", "scissors"];
 
     // get a random index    
 
     let randomIndex = Math.floor(Math.random() * myPix.length);
     
     // display the image
-    document.getElementById("image-box").src = window.location.href + 'assets/images/' + myPix[randomIndex];
+    document.getElementById("image-box").src = window.location.href + "assets/images/" + myPix[randomIndex] + ".png";
+
+    //return the computer's choice
+    return myPix[randomIndex];
 }
+
+
 
 function rpsGame() {
 
@@ -31,58 +48,71 @@ function rpsGame() {
     let computerScore = 0;
     let roundNumber = 0;
 
-    // to be continued
+    // function to play the game
+
+    
 
 }
 
 /**
  *  check who wins
  */ 
-function winner(player, computer) {
-    const playerScore = document.querySelector("#player");
-    const computerScore = document.querySelector("#pc");
-    // player = player.toLowerCase();
-    // computer = computer.toLowerCase(); not sure what this code does, need to look at them later
-
+function checkWinner(player, computer) {
     if (player === computer) {
-        alert(`It's a tie! Please try again!`)
+        alert(`It's a tie! Please try again!`);
     } else if (player == "rock") {
         if (computer == "paper") {
-            incrementsPcScore();
+            incrementPcScore();
         } else {
             incrementPlayerScore();
+
         }
     } else if (player == "paper") {
         if (computer == "rock") {
             incrementPlayerScore();
         } else {
-            incrementsPcScore();
+            incrementPcScore();
         }
     } else if (player == "scissors") {
         if (computer == "rock") {
-            incrementsPcScore();
+            incrementPcScore();
+
         } else {
             incrementPlayerScore();
+
         }
     }
 
     
 }
-winner();
+
+
 
 /**
  *  get the current score from the dom and add 1 to the player score
  */ 
 function incrementPlayerScore() {
     let previousScore = parseInt(document.getElementById("player").innerText);
-    document.getElementById("player").innerText = ++previousScore;
+    previousScore++;
+    document.getElementById("player").innerText = previousScore;
 }
 
 /**
  * get the current score from the dom and add 1 to the pc score
  */
-function incrementsPcScore() {
-    let previousScore = parseInt(document.getElementById("pc").innerText);
-    document.getElementById("pc").innerText = ++previousScore;
+function incrementPcScore() {
+    let previousPcScore = parseInt(document.getElementById("computer").innerText);
+    previousPcScore++;
+    document.getElementById("computer").innerText = previousPcScore;
 }
+
+/**
+ * get the current round number from the dom and add 1
+ */
+function incrementRoundNum() {
+    let previousRoundNum = parseInt(document.getElementById("round-number").innerText);
+    previousRoundNum++;
+    document.getElementById("round-number").innerText = previousRoundNum;
+}
+
 

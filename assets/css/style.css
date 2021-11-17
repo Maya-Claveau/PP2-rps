@@ -108,9 +108,24 @@ h1 {
     margin-top: 15px;
 }
 
+.gameover-restart-area {
+    margin-top: 15px;
+    
+}
+
+#gameover-btn {
+    font-size: 120%;
+    border-radius: 10px;
+    border: 3px solid gold;
+    width: 150px;
+    background-color: lightgoldenrodyellow;
+}
+
 footer {
     float: left;
     margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 /* Media queries */
