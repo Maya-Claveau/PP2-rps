@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let computer = displayRandomImage();
             checkWinner(player, computer);
             incrementRoundNum();
+            
         })       
     }
 
@@ -42,14 +43,16 @@ function displayRandomImage() {
 
 
 
-function rpsGame() {
+function playGame() {
 
-    let playerScore = 0;
-    let computerScore = 0;
-    let roundNumber = 0;
+    let playerScore = previousScore;
+    let computerScore = previousPcScore;
+    
 
-    // function to play the game
-
+ // when round number 7 is reached, call gameover function
+    if (previousRoundNum == 7) {
+        gameOver();
+    }
     
 
 }
@@ -87,7 +90,6 @@ function checkWinner(player, computer) {
 }
 
 
-
 /**
  *  get the current score from the dom and add 1 to the player score
  */ 
@@ -114,5 +116,21 @@ function incrementRoundNum() {
     previousRoundNum++;
     document.getElementById("round-number").innerText = previousRoundNum;
 }
+
+/**
+ *  the the game over function 
+ */
+
+ function gameOver() {
+        let gameoverBtn = document.getElementById("gameover-btn");
+        gameoverBtn.innerText = "Start Again!";
+
+        if (playerScore > computerScore) {
+            document.getElementById("result").innerText = "Congratulations! You won the game!"
+        } else {
+            document.getElementById("result").innerText = "You lost the game!"
+        }
+    
+    }
 
 
