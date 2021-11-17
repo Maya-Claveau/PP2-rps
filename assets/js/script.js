@@ -1,30 +1,37 @@
 // Wait for the Dom to finish loading before running the game
 // Get the button elements and add event listeners
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         // if (button === document.getElementById("gameover-btn")) {
         //     // do nothing
         // } else {
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function () {
             let player = this.getAttribute("data-type");
             let computer = displayRandomImage();
             checkWinner(player, computer);
             incrementRoundNum();
-            
-        })       
+
+        })
     }
 
-    
+
 });
 
+
+let startNewGame = document.getElementById("newGame-btn");
+startNewGame.addEventListener("click", function() {
+    playScore = 0;
+    computerScore = 0;
+    playGame();
+})
 
 
 /**
  *  display a random image and computer's choice
- */ 
+ */
 function displayRandomImage() {
     // get all the images of rock paper and scissors
 
@@ -33,7 +40,7 @@ function displayRandomImage() {
     // get a random index    
 
     let randomIndex = Math.floor(Math.random() * myPix.length);
-    
+
     // display the image
     document.getElementById("image-box").src = window.location.href + "assets/images/" + myPix[randomIndex] + ".png";
 
@@ -45,21 +52,23 @@ function displayRandomImage() {
 
 function playGame() {
 
-    let playerScore = previousScore;
-    let computerScore = previousPcScore;
-    
-
- // when round number 7 is reached, call gameover function
-    if (previousRoundNum == 7) {
-        gameOver();
-    }
+    let playerScore = 0;
+    let computerScore = 0;
+    let roundNum = 0;
     
 
 }
 
+// function startNewGame() {
+//     let playerScore = 0;
+//     let computerScore = 0;
+//     let roundNum = 0;
+//     playGame();
+// }
+
 /**
  *  check who wins
- */ 
+ */
 function checkWinner(player, computer) {
     if (player === computer) {
         alert(`It's a tie! Please try again!`);
@@ -86,13 +95,13 @@ function checkWinner(player, computer) {
         }
     }
 
-    
+
 }
 
 
 /**
  *  get the current score from the dom and add 1 to the player score
- */ 
+ */
 function incrementPlayerScore() {
     let previousScore = parseInt(document.getElementById("player").innerText);
     previousScore++;
@@ -112,25 +121,49 @@ function incrementPcScore() {
  * get the current round number from the dom and add 1
  */
 function incrementRoundNum() {
+    let previousScore = parseInt(document.getElementById("player").innerText);
+    let previousPcScore = parseInt(document.getElementById("computer").innerText);
     let previousRoundNum = parseInt(document.getElementById("round-number").innerText);
-    previousRoundNum++;
-    document.getElementById("round-number").innerText = previousRoundNum;
+    let startNewGame = document.getElementById("newGame-btn");
+    let gameOverBtn = document.getElementById("gameover-btn");
+
+    if (previousRoundNum < 7) {
+        previousRoundNum++;
+        document.getElementById("round-number").innerText = previousRoundNum;
+        startNewGame.classList.remove("is-visible");
+        gameOverBtn.classList.add('is-visible');
+        
+    } else {
+        gameOver();
+        startNewGame.classList.add('is-visible');
+        gameOverBtn.classList.remove("is-visible");
+
+    }
+
+
+    console.log(previousRoundNum);
+
+    // when round number 7 is reached, call gameover function
+
+
 }
 
 /**
  *  the the game over function 
  */
 
- function gameOver() {
-        let gameoverBtn = document.getElementById("gameover-btn");
-        gameoverBtn.innerText = "Start Again!";
+function gameOver() {
+    let previousScore = parseInt(document.getElementById("player").innerText);
+    let previousPcScore = parseInt(document.getElementById("computer").innerText);
+    let playerScore = previousScore;
+    let computerScore = previousPcScore;
+    let gameoverBtn = document.getElementById("gameover-btn");
+    gameoverBtn.innerText = "Start Again!";
 
-        if (playerScore > computerScore) {
-            document.getElementById("result").innerText = "Congratulations! You won the game!"
-        } else {
-            document.getElementById("result").innerText = "You lost the game!"
-        }
-    
-    }
+    if (playerScore > computerScore) {
+        document.getElementById("result").innerText = "Congratulations! You won the game!"
+    } else {
+        document.getElementById("result").innerText = "You lost the game!"
+    };
 
-
+}
