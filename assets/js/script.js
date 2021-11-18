@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByClassName("option-btn"); // target only the 3 buttons for player options
 
     for (let button of buttons) {
-        
+
         button.addEventListener("click", function () {
             let player = this.getAttribute("data-type");
             let computer = displayRandomImage();
@@ -19,11 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-let startNewGame = document.getElementById("newGame-btn");
-startNewGame.addEventListener("click", function() {
-    playScore = 0;
-    computerScore = 0;
-    playGame();
+let startNewGame = document.getElementById("restart-btn");
+startNewGame.addEventListener("click", function () {
+        playGame();
 })
 
 
@@ -46,23 +44,16 @@ function displayRandomImage() {
     return myPix[randomIndex];
 }
 
-
-
+/**
+ * play or restart the game
+ */
 function playGame() {
 
     let playerScore = 0;
     let computerScore = 0;
     let roundNum = 0;
-    
-
 }
 
-// function startNewGame() {
-//     let playerScore = 0;
-//     let computerScore = 0;
-//     let roundNum = 0;
-//     playGame();
-// }
 
 /**
  *  check who wins
@@ -122,26 +113,18 @@ function incrementRoundNum() {
     let previousScore = parseInt(document.getElementById("player").innerText);
     let previousPcScore = parseInt(document.getElementById("computer").innerText);
     let previousRoundNum = parseInt(document.getElementById("round-number").innerText);
-    let startNewGame = document.getElementById("newGame-btn");
-    let gameOverBtn = document.getElementById("gameover-btn");
+
+    // when round number 7 is reached, call gameover function
 
     if (previousRoundNum < 7) {
         previousRoundNum++;
         document.getElementById("round-number").innerText = previousRoundNum;
-        startNewGame.classList.remove("is-visible");
-        gameOverBtn.classList.add('is-visible');
-        
     } else {
         gameOver();
-        startNewGame.classList.add('is-visible');
-        gameOverBtn.classList.remove("is-visible");
-
     }
-
 
     console.log(previousRoundNum);
 
-    // when round number 7 is reached, call gameover function
 
 
 }
@@ -155,13 +138,22 @@ function gameOver() {
     let previousPcScore = parseInt(document.getElementById("computer").innerText);
     let playerScore = previousScore;
     let computerScore = previousPcScore;
-    let gameoverBtn = document.getElementById("gameover-btn");
-    gameoverBtn.innerText = "Start Again!";
 
     if (playerScore > computerScore) {
         document.getElementById("result").innerText = "Congratulations! You won the game!"
     } else {
         document.getElementById("result").innerText = "You lost the game!"
     };
+
+    // make the restart button hiden when the game starts, showing when the game ends
+
+    let disableBtn = true; //change this value to false and the button will be clickable
+    let restartBtn = document.getElementById('restart-btn');
+
+    if (disableBtn) {
+        button.disabled = "disabled";
+    } else {
+        button.disbled = "clickable";
+    }
 
 }
