@@ -1,13 +1,13 @@
 // Wait for the Dom to finish loading before running the game
 // Get the button elements and add event listeners
 
- // make the restart button hiden when the game starts
+// make the restart button hiden when the game starts
 let disableBtn = true; //change this value to false and the button will be clickable
-    let restartBtn = document.getElementById('restart-btn');
+let restartBtn = document.getElementById('restart-btn');
 
-    if (disableBtn) {
-        restartBtn.disabled = "disabled";
-    }
+if (disableBtn) {
+    restartBtn.disabled = "disabled";
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByClassName("option-btn"); // target only the 3 buttons for player options
@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let startNewGame = document.getElementById("restart-btn");
 startNewGame.addEventListener("click", function () {
-        console.log("hello");
-        playGame();
+    console.log("hello");
+    playGame();
 });
 
 
@@ -66,7 +66,7 @@ function playGame() {
     computerScore = document.getElementById("computer").innerText = 0;
     roundNum = document.getElementById("round-number").innerText = 0;
 }
-   
+
 
 
 /**
@@ -124,7 +124,7 @@ function incrementPcScore() {
  * get the current round number from the dom and add 1
  */
 function incrementRoundNum() {
-    
+
     let previousRoundNum = parseInt(document.getElementById("round-number").innerText);
 
     // when round number 7 is reached, call gameover function
@@ -156,14 +156,8 @@ function gameOver() {
         document.getElementById("result").innerText = "You lost the game!";
     }
 
-    // make the restart button showing when the game ends
+    // make the restart button clickable when the game ends
 
-    let disableBtn = true; //change this value to false and the button will be clickable
-    let restartBtn = document.getElementById('restart-btn');
+    document.getElementById('restart-btn').disabled = false;
 
-    if (disableBtn) {
-        restartBtn.disabled = "disabled";
-    } else {
-        restartBtn.disabled = "enabled";
-    }
 }
