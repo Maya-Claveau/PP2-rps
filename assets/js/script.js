@@ -65,6 +65,7 @@ function playGame() {
     playerScore = document.getElementById("player").innerText = 0;
     computerScore = document.getElementById("computer").innerText = 0;
     roundNum = document.getElementById("round-number").innerText = 0;
+    document.getElementById("result").innerText = "";
 }
 
 
@@ -152,8 +153,10 @@ function gameOver() {
 
     if (playerScore > computerScore) {
         document.getElementById("result").innerText = "Congratulations! You won the game!";
-    } else {
+    } else if (playerScore < computerScore) {
         document.getElementById("result").innerText = "You lost the game!";
+    } else {
+        document.getElementById("result").innerText = "It's a tie!"
     }
 
     // make the restart button clickable when the game ends
