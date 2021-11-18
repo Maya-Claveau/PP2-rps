@@ -1,6 +1,14 @@
 // Wait for the Dom to finish loading before running the game
 // Get the button elements and add event listeners
 
+ // make the restart button hiden when the game starts
+let disableBtn = true; //change this value to false and the button will be clickable
+    let restartBtn = document.getElementById('restart-btn');
+
+    if (disableBtn) {
+        restartBtn.disabled = "disabled";
+    }
+
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByClassName("option-btn"); // target only the 3 buttons for player options
 
@@ -21,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let startNewGame = document.getElementById("restart-btn");
 startNewGame.addEventListener("click", function () {
+        console.log("hello");
         playGame();
 })
 
@@ -52,7 +61,12 @@ function playGame() {
     let playerScore = 0;
     let computerScore = 0;
     let roundNum = 0;
+
+    playerScore = document.getElementById("player").innerText = 0;
+    computerScore = document.getElementById("computer").innerText = 0;
+    roundNum = document.getElementById("round-number").innerText = 0;
 }
+   
 
 
 /**
@@ -125,8 +139,6 @@ function incrementRoundNum() {
 
     console.log(previousRoundNum);
 
-
-
 }
 
 /**
@@ -145,15 +157,12 @@ function gameOver() {
         document.getElementById("result").innerText = "You lost the game!"
     };
 
-    // make the restart button hiden when the game starts, showing when the game ends
+    // make the restart button showing when the game ends
 
-    let disableBtn = true; //change this value to false and the button will be clickable
+    let disableBtn = false; //change this value to false and the button will be clickable
     let restartBtn = document.getElementById('restart-btn');
 
     if (disableBtn) {
-        button.disabled = "disabled";
-    } else {
-        button.disbled = "clickable";
-    }
-
+        restartBtn.disabled = "enabled";
+    };
 }
