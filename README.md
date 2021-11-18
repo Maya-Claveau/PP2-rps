@@ -52,3 +52,30 @@ There is a small footer on the bottom left of the page, with information of copy
 
 ------
 ## Testing:
+
+Google dev tools became my first choice for testing purposes. I use it on a daily basis since the development stage. For instance:
+- after added media queries for medium sized screens, it affected my mobile version for some reason and after some digging I finally fixed it. See screenshot below,
+
+<br>
+<img src="assets/images/media-queries-issue.png" width="800">
+<br>
+<br>
+- the page went through major development progress as I was building it, my initial idea wasn't complete, and there are things I didn't consider. As I worked on it, more ideas came to my mind, with the help of fellow students on slack, my mentor, finally the website looked like a little more proper gaming site than what I had originally planned. 
+
+<br>
+<img src="assets/images/mob-v1.png" width="400">
+<br>
+
+<br>
+<img src="assets/images/mob-v2.png" width="400">
+<br>
+
+<br>
+<img src="assets/images/mob-v2-2.png" width="400">
+<br>
+
+<br>
+<img src="assets/images/desktop-v2-2.png" width="800">
+<br>
+<br>
+- when I need to write JavaScript code, the chance of it works as intended is very little for me. Without google dev tools and the help from others, this project won’t be existing. I will come back to it later.
