@@ -2,19 +2,17 @@
 // Get the button elements and add event listeners
 
 document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
+    let buttons = document.getElementsByClassName("option-btn"); // target only the 3 buttons for player options
 
     for (let button of buttons) {
-        // if (button === document.getElementById("gameover-btn")) {
-        //     // do nothing
-        // } else {
+        
         button.addEventListener("click", function () {
             let player = this.getAttribute("data-type");
             let computer = displayRandomImage();
             checkWinner(player, computer);
             incrementRoundNum();
 
-        })
+        }) // with the change above, this function is still working on game over and start new game button, need to solve this
     }
 
 
