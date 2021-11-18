@@ -72,13 +72,6 @@ h1 {
     font-size: 0.7rem;
 }
 
-/* .computer-choice img {
-    height: 30%;
-    width: 30%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-} */
-
 .computer-choice h3 {
     margin-bottom: 15px;
 }
@@ -143,8 +136,9 @@ footer {
 
 /* Media queries */
 
-/* for medium screen size from 769px and up to 1200px width */
-@media screen and (min-width: 769px), screen and (max-width: 1200px) {
+/* for medium screen size between 750px and 1200px width */
+@media only screen and (max-width: 1200px) and (min-width: 750px) {
+/* @media screen and (min-width: 750px), screen and (max-width: 1200px) { */
     h1 {
         font-size: 350%;
     }

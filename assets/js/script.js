@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             checkWinner(player, computer);
             incrementRoundNum();
 
-        }) // with the change above, this function is still working on game over and start new game button, need to solve this
+        }); // with the change above, this function is still working on game over and start new game button, need to solve this
     }
 
 
@@ -31,7 +31,7 @@ let startNewGame = document.getElementById("restart-btn");
 startNewGame.addEventListener("click", function () {
         console.log("hello");
         playGame();
-})
+});
 
 
 /**
@@ -54,7 +54,7 @@ function displayRandomImage() {
 }
 
 /**
- * play or restart the game
+ * restart the game
  */
 function playGame() {
 
@@ -124,8 +124,7 @@ function incrementPcScore() {
  * get the current round number from the dom and add 1
  */
 function incrementRoundNum() {
-    let previousScore = parseInt(document.getElementById("player").innerText);
-    let previousPcScore = parseInt(document.getElementById("computer").innerText);
+    
     let previousRoundNum = parseInt(document.getElementById("round-number").innerText);
 
     // when round number 7 is reached, call gameover function
@@ -152,17 +151,19 @@ function gameOver() {
     let computerScore = previousPcScore;
 
     if (playerScore > computerScore) {
-        document.getElementById("result").innerText = "Congratulations! You won the game!"
+        document.getElementById("result").innerText = "Congratulations! You won the game!";
     } else {
-        document.getElementById("result").innerText = "You lost the game!"
-    };
+        document.getElementById("result").innerText = "You lost the game!";
+    }
 
     // make the restart button showing when the game ends
 
-    let disableBtn = false; //change this value to false and the button will be clickable
+    let disableBtn = true; //change this value to false and the button will be clickable
     let restartBtn = document.getElementById('restart-btn');
 
     if (disableBtn) {
+        restartBtn.disabled = "disabled";
+    } else {
         restartBtn.disabled = "enabled";
-    };
+    }
 }
