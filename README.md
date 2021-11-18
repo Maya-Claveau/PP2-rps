@@ -43,3 +43,12 @@ Now the “Play again” button will be clickable, so you can decide to play aga
 <br>
 There is a small footer on the bottom left of the page, with information of copyright. And that's about it, this is only a single page project. Simple, easy and chill. 
 
+<br>
+
+### Features to be added later:
+- the option to play against another player on two different devices
+- if you lose 3 rounds in a roll, you are obliged to play another round
+- the option to create an account, there you can add your friends and family, so you can play together no matter where you are
+
+------
+## Testing:
