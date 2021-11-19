@@ -1,6 +1,5 @@
 // Wait for the Dom to finish loading before running the game
 // Get the button elements and add event listeners
-
 // make the restart button hiden when the game starts
 let disableBtn = true; //change this value to false and the button will be clickable
 let restartBtn = document.getElementById('restart-btn');
@@ -9,40 +8,29 @@ if (disableBtn) {
     restartBtn.disabled = "disabled";
 }
 
-let disableOptionBtn = false;
-let optionBtn = document.getElementsByClassName('option-btn');
-
-if (disableOptionBtn) {
-    optionBtn.disabled = "disabled";
-}
-
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByClassName("option-btn"); // target only the 3 buttons for player options
 
     for (let button of buttons) {
-
         button.addEventListener("click", function () {
-            let player = this.getAttribute("data-type");
-            let computer = displayRandomImage();
-            checkWinner(player, computer);
-            incrementRoundNum();
+            if (disableBtn) {
+                let player = this.getAttribute("data-type");
+                let computer = displayRandomImage();
+                checkWinner(player, computer);
+                incrementRoundNum();   
+            }
         });
     }
-
-
 });
-
 
 let startNewGame = document.getElementById("restart-btn");
 startNewGame.addEventListener("click", function () {
-    console.log("hello");
     playGame();
 });
 
 /**
  * popup of the game rule button 
  */
-
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
 const closeModalButtons = document.querySelectorAll("[data-close-button]");
 const overlay = document.getElementById("overlay");
@@ -103,18 +91,12 @@ function displayRandomImage() {
  * restart the game
  */
 function playGame() {
-
-    let playerScore = 0;
-    let computerScore = 0;
-    let roundNum = 0;
-
-    playerScore = document.getElementById("player").innerText = 0;
-    computerScore = document.getElementById("computer").innerText = 0;
-    roundNum = document.getElementById("round-number").innerText = 0;
+    document.getElementById("player").innerText = 0;
+    document.getElementById("computer").innerText = 0;
+    document.getElementById("round-number").innerText = 0;
     document.getElementById("result").innerText = "";
+    disableBtn = true;
 }
-
-
 
 /**
  *  check who wins
@@ -127,7 +109,6 @@ function checkWinner(player, computer) {
             incrementPcScore();
         } else {
             incrementPlayerScore();
-
         }
     } else if (player == "paper") {
         if (computer == "rock") {
@@ -144,10 +125,7 @@ function checkWinner(player, computer) {
 
         }
     }
-
-
 }
-
 
 /**
  *  get the current score from the dom and add 1 to the player score
@@ -171,34 +149,29 @@ function incrementPcScore() {
  * get the current round number from the dom and add 1
  */
 function incrementRoundNum() {
-
     let previousRoundNum = parseInt(document.getElementById("round-number").innerText);
-
     // when round number 7 is reached, call gameover function
-
-    if (previousRoundNum < 7) {
+    if (gameIsComplete(previousRoundNum)) {
+        gameOver();
+    } else {        
         previousRoundNum++;
         document.getElementById("round-number").innerText = previousRoundNum;
-    } else {
-        gameOver();
-
     }
-
-    console.log(previousRoundNum);
-
 }
 
+function gameIsComplete(previousRoundNum) {
+    return previousRoundNum > 6;
+}
 
 /**
  *  the game over function 
  */
-
 function gameOver() {
     let previousScore = parseInt(document.getElementById("player").innerText);
     let previousPcScore = parseInt(document.getElementById("computer").innerText);
     let playerScore = previousScore;
     let computerScore = previousPcScore;
-   
+
     if (playerScore > computerScore) {
         document.getElementById("result").innerText = "Congratulations! You won the game!";
     } else if (playerScore < computerScore) {
@@ -206,14 +179,7 @@ function gameOver() {
     } else {
         document.getElementById("result").innerText = "It's a tie!";
     }
-
     // make the restart button clickable when the game ends
-
+    disableBtn = false;
     document.getElementById('restart-btn').disabled = false;
-
-    // make the option button not displaying when the game ends
-    // document.getElementsByClassName("option-area").hide();
-    document.getElementsByClassName('option-btn').disabled = true;
-
 }
-

@@ -1,0 +1,23 @@
+{
+  "name": "pp2-rps",
+  "version": "1.0.0",
+  "description": "<img src=\"assets/images/responsive-mockup.png\" width=\"800\">",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maya-Claveau/PP2-rps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maya-Claveau/PP2-rps/issues"
+  },
+  "homepage": "https://github.com/Maya-Claveau/PP2-rps#readme"
+}
