@@ -126,13 +126,28 @@ Google dev tools became my first choice for testing purposes. I use it on a dail
 
 - [Google Fonts](https://fonts.google.com/) for selecting the fonts for the project. I choose [Architects Daughter](https://fonts.google.com/specimen/Architects+Daughter?preview.text=step%201:%20choose%20your%20first%20move&preview.text_type=custom), because it looks a little childish and it matches with the type of game and my purpose of bringing back good memories from the childhood.
 
-- [Font Color](https://mycolor.space/?hex=%23000000&sub=1) I used colorspace to pick the Small Switch Palette, which in my opinion is nice and simple and goes well with the background. 
+- [Font Color](https://mycolor.space/?hex=%23000000&sub=1) I used colorspace to pick the Small Switch Palette, which in my opinion is nice and simple, goes well with the playful background. The CSS code for background color is also generated from this website.
 
 <img src="assets/images/colorspace.png" width="250">
 
 - [Am I Responsive](http://ami.responsivedesign.is/?url=https%3A%2F%2Fmaya-claveau.github.io%2FPP2-rps%2F) for making the responsive screenshot
 
 <img src="assets/images/responsive-mockup.png" width="250">
+
+- [Font Awesome](https://fontawesome.com/) for the game play icons
+
+<img src="assets/images/gameplay-icon1.png" width="150">
+<img src="assets/images/gameplay-icon2.png" width="150">
+<img src="assets/images/gameplay-icon3.png" width="150">
+
+- [Soda PDF](https://www.sodapdf.com/?mkey1=sodapdf.com%2Fjpg-to-png%2F) for converting logos and computer choice images from .jpg into .png, so the white background can be removed and look better with any backgrounds.
+<p>Before:</p> <img src="assets/images/rsp-logo-v2.png" width="200"> 
+<p>After:</p>
+<img src="assets/images/logo-v4.png" width="200">
+
+- [W3C Markup Validator](https://validator.w3.org/#validate_by_input) for validate HTML code
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) for validate CSS code
+- [JS Hint](https://jshint.com/) for validate JavaScript code
 
 ------
 
@@ -155,3 +170,31 @@ The published link will be generated for live view, it can be found [here](https
 
 ------
 
+## **Things I tried but didn't work**
+
+<p> I tried to fix the JavaScript warning, fellow student and mentor on Slack suggested using “const” and “foreach()” loop. I managed to remove the warning from JSHint, but the game function doesn’t work anymore. So I ended up switching back to the code that works for the game but with the warning message.
+</p>
+
+------
+## **Difficulties that I manage to overcome**
+
+<p>My original idea towards the bottom of the page had no buttons, as I was working on it, I realised I needed one button. At the beginning of the game, it will say "Good Luck". When the game is over, it will change to "Game over" (until this point, the button has no functions, hence not clickable). Then it will change to "Play again", now it will have the function attached to it in order to restart the game. One fellow student pointed out that that’s too many things loading on one button. He also suggested making the button hidden in the beginning, and showing when the game is over. I thought was a great idea, so I tried with “classList.add('is-visible')” and “classList.remove('is-visible')” but it didn’t work.</p>
+
+<p>After the 2nd mentor session, my mentor suggested using CSS and JS to enable/disable the button. and it worked like a wonder.</p>
+
+<p>This is just one small example, the difficulties I have encountered especially with JavaScript is always intense. The frustration is constant. Out of the 10 functions I have, 7 of them had some help from someone, the code I wrote by myself never works. I had major doubts that I would ever be able to make this game work. Luckily, with the support of my mentor, tutor support and fellow students on Slack, I managed to make it work, and it seems like I will be submitting it before the deadline. No matter the outcome, I just wanted to express my gratitude to everyone that’s helped me on this project. Peace and Love!</p>
+
+<br>
+
+------
+## **Credits:**
+
+------
+## **Acknowledgments**
+My mentor for continuous and structured feedback.
+
+Tutor support at Code Institute. For this project, they helped me a lot, I am really grateful for that.
+
+Fellow students on Slack community for their help and support, is amazing how smart and positive this community is, someone is willing to help at any given time. I am very lucky to study alongside of them.
+
+So THANK YOU ALL! Without your help my project wouldn't be as good.
