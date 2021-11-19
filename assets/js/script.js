@@ -9,6 +9,13 @@ if (disableBtn) {
     restartBtn.disabled = "disabled";
 }
 
+let disableOptionBtn = false;
+let optionBtn = document.getElementsByClassName('option-btn');
+
+if (disableOptionBtn) {
+    optionBtn.disabled = "disabled";
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByClassName("option-btn"); // target only the 3 buttons for player options
 
@@ -33,44 +40,44 @@ startNewGame.addEventListener("click", function () {
 });
 
 /**
- * pop up on game rule button 
+ * popup of the game rule button 
  */
 
-const openModalButtons = document.querySelectorAll("[data-modal-target]")
-const closeModalButtons = document.querySelectorAll("[data-close-button]")
-const overlay = document.getElementById("overlay")
+const openModalButtons = document.querySelectorAll("[data-modal-target]");
+const closeModalButtons = document.querySelectorAll("[data-close-button]");
+const overlay = document.getElementById("overlay");
 
 openModalButtons.forEach(button => {
     button.addEventListener("click", () => {
-        const modal = document.querySelector(button.dataset.modalTarget) // select the modal
-        openModal(modal)
-    })
-})
+        const modal = document.querySelector(button.dataset.modalTarget); // select the modal
+        openModal(modal);
+    });
+});
 
 closeModalButtons.forEach(button => {
     button.addEventListener("click", () => {
-        const modal = button.closest(".modal")
-        closeModal(modal)
-    })
-})
+        const modal = button.closest(".modal");
+        closeModal(modal);
+    });
+});
 
-overlay.addEventListener("click",() => {
-    const modals = document.querySelectorAll(".modal.active")
+overlay.addEventListener("click", () => {
+    const modals = document.querySelectorAll(".modal.active");
     modals.forEach(modal => {
-       closeModal(modal) 
-    })
-})
+        closeModal(modal);
+    });
+});
 
 function openModal(modal) {
-    if (modal == null) return
-    modal.classList.add("active")
-    overlay.classList.add("active")    
+    if (modal == null) return;
+    modal.classList.add("active");
+    overlay.classList.add("active");
 }
 
 function closeModal(modal) {
-    if (modal == null) return
-    modal.classList.remove("active")
-    overlay.classList.remove("active")    
+    if (modal == null) return;
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
 }
 
 /**
@@ -174,14 +181,16 @@ function incrementRoundNum() {
         document.getElementById("round-number").innerText = previousRoundNum;
     } else {
         gameOver();
+
     }
 
     console.log(previousRoundNum);
 
 }
 
+
 /**
- *  the the game over function 
+ *  the game over function 
  */
 
 function gameOver() {
@@ -189,7 +198,7 @@ function gameOver() {
     let previousPcScore = parseInt(document.getElementById("computer").innerText);
     let playerScore = previousScore;
     let computerScore = previousPcScore;
-
+   
     if (playerScore > computerScore) {
         document.getElementById("result").innerText = "Congratulations! You won the game!";
     } else if (playerScore < computerScore) {
@@ -202,4 +211,9 @@ function gameOver() {
 
     document.getElementById('restart-btn').disabled = false;
 
+    // make the option button not displaying when the game ends
+    // document.getElementsByClassName("option-area").hide();
+    document.getElementsByClassName('option-btn').disabled = true;
+
 }
+

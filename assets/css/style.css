@@ -61,7 +61,7 @@ h1 {
     border-radius: 10px;
     z-index: 10;
     background-color: white;
-    width: 300px;
+    width: 500px;
     max-width: 80%;
     color: black;
 }
@@ -126,6 +126,13 @@ h1 {
     margin-bottom: 25px;
     text-transform: uppercase;
     transition: all .5s;
+}
+
+.option-btn:disabled {
+    background: #999;
+    color: #555;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 .option-area button:hover {

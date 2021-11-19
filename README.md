@@ -202,6 +202,8 @@ The published link will be generated for live view, it can be found [here](https
 
 - [Stack Overflow](https://stackoverflow.com/questions/6199773/how-to-enable-disable-an-html-button-based-on-scenarios) for the code to enable/disable the button
 
+- [Build a Pop Up with JavaScript by Web Dev Simplified](https://www.youtube.com/watch?v=MBaw_6cPmAw&t=717s) for the whole game rule popup code
+
 ------
 ## **Acknowledgments**
 My mentor for continuous and structured feedback.
