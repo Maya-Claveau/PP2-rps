@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             checkWinner(player, computer);
             incrementRoundNum();
 
-        }); // with the change above, this function is still working on game over and start new game button, need to solve this
+        });
     }
 
 
@@ -156,7 +156,7 @@ function gameOver() {
     } else if (playerScore < computerScore) {
         document.getElementById("result").innerText = "You lost the game!";
     } else {
-        document.getElementById("result").innerText = "It's a tie!"
+        document.getElementById("result").innerText = "It's a tie!";
     }
 
     // make the restart button clickable when the game ends
