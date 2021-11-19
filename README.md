@@ -189,6 +189,18 @@ The published link will be generated for live view, it can be found [here](https
 ------
 ## **Credits:**
 
+- Code Institute's [Love Math project](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode)
+- [W3C Schools](https://www.w3schools.com), [Mozilla Developer](https://developer.mozilla.org) and [Stackoverflow](https://stackoverflow.com/) for researching different elements, functions and how to use them
+- [Visit South Walton Florida](https://www.visitsouthwalton.com/listing/rock-paper-scissors-30a/) for downloading the beautiful logo and game image
+
+- [Media Query CSS Tutorial](https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/) for the information regarding breakpoint on different devices
+
+- [Stack Overflow](https://stackoverflow.com/questions/6199773/how-to-enable-disable-an-html-button-based-on-scenarios) for the code to enable/disable the button
+
+
+
+
+
 ------
 ## **Acknowledgments**
 My mentor for continuous and structured feedback.
