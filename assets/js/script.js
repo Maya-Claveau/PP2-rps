@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
             let computer = displayRandomImage();
             checkWinner(player, computer);
             incrementRoundNum();
-
         });
     }
 
