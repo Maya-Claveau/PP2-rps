@@ -1,6 +1,6 @@
 # Let **[Rock, Paper, Scissors](https://maya-claveau.github.io/PP2-rps/)** bring all the good memories back from your childhood 
 
-<img src="assets/images/responsive-mockup.png" width="800">
+<img src="assets/images/responsive-mockup-vfinal.png" width="800">
 
 This was built with the intention of entertaining the player, with a classic game from almost everyone’s childhood. Main objectives are: 
 
@@ -21,15 +21,22 @@ Many of us are familiar with this game, we can even call it a classic. If you we
 ### Existing Features:
 #### Home page:
 
-First thing you see when you land on the website is the logo on the top left side with the title Rock, Paper, Scissors below it. Followed by the instructions of the game. Then you will come to the game area where the number of rounds are showing, so you know how many are left until the game is over. 
+First thing you see when you land on the website is the logo on the top left side with the title Rock, Paper, Scissors below it. Followed by the instructions of the game. 
 
 <br>
 <img src="assets/images/landing-page1.png" width="800">
-<br> 
+<br>
 <br>
 
-You have 3 options to choose from, so make your decision wisely. The computer will also make its choice the same time you make yours, so fair game for everyone. The winner for that round will get a point, when round 7 is completed, there will be a message informing you whether you are the winner or … you know.  
+By clicking the rule button, you will see the game rules in popup window.
 
+<br>
+<img src="assets/images/landing-page-popup.png" width="800">
+<br> 
+
+<p>Then you will come to the game area where the number of rounds are showing, so you know how many are left until the game is over.</p>
+
+<p>You have 3 options to choose from, so make your decision wisely. The computer will also make its choice the same time you make yours, so fair game for everyone. The winner for that round will get a point, when round 7 is completed, there will be a message informing you whether you are the winner or … you know.</p>
 
 <br>
 <img src="assets/images/landing-page2.png" width="800">
@@ -132,7 +139,7 @@ Google dev tools became my first choice for testing purposes. I use it on a dail
 
 - [Am I Responsive](http://ami.responsivedesign.is/?url=https%3A%2F%2Fmaya-claveau.github.io%2FPP2-rps%2F) for making the responsive screenshot
 
-<img src="assets/images/responsive-mockup.png" width="250">
+<img src="assets/images/responsive-mockup-vfinal.png" width="250">
 
 - [Font Awesome](https://fontawesome.com/) for the game play icons
 
@@ -179,6 +186,12 @@ The published link will be generated for live view, it can be found [here](https
 
 <p> I tried to fix the JavaScript warning, fellow student and mentor on Slack suggested using “const” and “foreach()” loop. I managed to remove the warning from JSHint, but the game function doesn’t work anymore. So I ended up switching back to the code that works for the game but with the warning message.
 </p>
+
+<p> Thanks to the peer-code-review channel on Slack, a fellow student pointed out that there is a bug. When the game is over, you can still click the option buttons, the round number won’t change, but the scores for both player and computer will still increment.</p>
+
+<img src="assets/images/gameover-bug.png" width="400">
+
+<p>I tried to disable the option buttons after round 7 and display none on the buttons after round 7, but didn’t manage to make it work. With the hope to get some help on a Friday evening, I for the first time jumped in with a call on Slack, luckily I found Sensei Bim there, with his help this issue was not an issue anymore. One small thing I have to note, is that when the game is over, the option buttons are clickable and the image of the computer's choice is still changing, but the scores and round number doesn't change. Due to the time constring, I didn’t manage to fix it. Other than that, the game works just fine.<p>
 
 ------
 ## **Difficulties that I manage to overcome**
