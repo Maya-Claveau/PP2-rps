@@ -149,6 +149,11 @@ Google dev tools became my first choice for testing purposes. I use it on a dail
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) for validate CSS code
 - [JS Hint](https://jshint.com/) for validate JavaScript code
 
+- [Balsamiq](https://balsamiq.com/) for creating the wireframes
+
+<img src="wireframes/wireframe-mobile-version.png" width="150">
+<img src="wireframes/wireframe-desktop-version.png" width="250">
+
 ------
 
 ## **Deployment**
@@ -196,10 +201,6 @@ The published link will be generated for live view, it can be found [here](https
 - [Media Query CSS Tutorial](https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/) for the information regarding breakpoint on different devices
 
 - [Stack Overflow](https://stackoverflow.com/questions/6199773/how-to-enable-disable-an-html-button-based-on-scenarios) for the code to enable/disable the button
-
-
-
-
 
 ------
 ## **Acknowledgments**
