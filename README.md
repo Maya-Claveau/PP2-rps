@@ -2,7 +2,7 @@
 
 <img src="assets/images/responsive-mockup-vfinal.png" width="800">
 
-This was built with the intention of entertaining the player, with a classic game from almost everyone’s childhood. Main objectives are: 
+<p>This was built with the intention of entertaining the player, with a classic game from almost everyone’s childhood. Main objectives are:</p>
 
 - to cheer up the player's mood
 - to challenge the computer’s logic 
@@ -13,7 +13,7 @@ This was built with the intention of entertaining the player, with a classic gam
 
 ## **Why This**
 
-Many of us are familiar with this game, we can even call it a classic. If you were born in the 80s like me, then you would remember that there weren't any electronics around like today, we'd play outside all day with our friends, and the rock, paper, scissors game is one of the most popular ones amongst many others. And very often, this little game also functions as a perfect solution for who starts first for a different game that we were planning to play. Here is why I chose to do this. Because of the global pandemic, we were advised not to gather with people, keep social distance, not to travel etc, basically to reduce the spread, each family needed to form and live their own babbles. For us human beings, this of course will make us feel lonely sometimes. My objective is by building this good old classy game, the player can play it wherever and whenever they would like. Hoping to bring back some of the great memories of your childhood and finally to cheer you up a little in this uncertain time.
+<p>Many of us are familiar with this game, we can even call it a classic. If you were born in the 80s like me, then you would remember that there weren't any electronics around like today, we'd play outside all day with our friends, and the rock, paper, scissors game is one of the most popular ones amongst many others. And very often, this little game also functions as a perfect solution for who starts first for a different game that we were planning to play. Here is why I chose to do this. Because of the global pandemic, we were advised not to gather with people, keep social distance, not to travel etc, basically to reduce the spread, each family needed to form and live their own babbles. For us human beings, this of course will make us feel lonely sometimes. My objective is by building this good old classy game, the player can play it wherever and whenever they would like. Hoping to bring back some of the great memories of your childhood and finally to cheer you up a little in this uncertain time.</p>
 
 ------
 
@@ -21,14 +21,13 @@ Many of us are familiar with this game, we can even call it a classic. If you we
 ### Existing Features:
 #### Home page:
 
-First thing you see when you land on the website is the logo on the top left side with the title Rock, Paper, Scissors below it. Followed by the instructions of the game. 
+<p>First thing you see when you land on the website is the logo on the top left side with the title Rock, Paper, Scissors below it. Followed by the instructions of the game.</p> 
 
 <br>
 <img src="assets/images/landing-page1.png" width="800">
 <br>
-<br>
 
-By clicking the rule button, you will see the game rules in popup window.
+<p>By clicking the rule button, you will see the game rules in popup window.</p>
 
 <br>
 <img src="assets/images/landing-page-popup.png" width="800">
@@ -41,14 +40,14 @@ By clicking the rule button, you will see the game rules in popup window.
 <br>
 <img src="assets/images/landing-page2.png" width="800">
 <br>
-<br>
-Now the “Play again” button will be clickable, so you can decide to play again or play again. You are welcome!
+
+<p>Now the “Play again” button will be clickable, so you can decide to play again or play again. You are welcome!</p>
 
 <br>
 <img src="assets/images/landing-page3.png" width="800">
 <br>
-<br>
-There is a small footer on the bottom left of the page, with information of copyright. And that's about it, this is only a single page project. Simple, easy and chill. 
+
+<p>There is a small footer on the bottom left of the page, with information of copyright. And that's about it, this is only a single page project. Simple, easy and chill.</p> 
 
 <br>
 
@@ -58,16 +57,18 @@ There is a small footer on the bottom left of the page, with information of copy
 - the option to create an account, there you can add your friends and family, so you can play together no matter where you are
 
 ------
+
 ## **Testing:**
 
-Google dev tools became my first choice for testing purposes. I use it on a daily basis since the development stage. For instance:
-- after added media queries for medium sized screens, it affected my mobile version for some reason and after some digging I finally fixed it. See screenshot below,
+<p>Google dev tools became my first choice for testing purposes. I use it on a daily basis since the development stage. For instance:</p>
+
+- <p>after added media queries for medium sized screens, it affected my mobile version for some reason and after some digging I finally fixed it. See screenshot below,</p>
 
 <br>
 <img src="assets/images/media-queries-issue.png" width="800">
 <br>
-<br>
-- the page went through major development progress as I was building it, my initial idea wasn't complete, and there are things I didn't consider. As I worked on it, more ideas came to my mind, with the help of fellow students on slack, my mentor, finally the website looked like a little more proper gaming site than what I had originally planned. 
+
+- <p>the page went through major development progress as I was building it, my initial idea wasn't complete, and there are things I didn't consider. As I worked on it, more ideas came to my mind, with the help of fellow students on slack, my mentor, finally the website looked like a little more proper gaming site than what I had originally planned.</p> 
 
 <br>
 <img src="assets/images/mob-v1.png" width="400">
@@ -84,9 +85,9 @@ Google dev tools became my first choice for testing purposes. I use it on a dail
 <br>
 <img src="assets/images/desktop-v2-2.png" width="800">
 <br>
-<br>
-- when I need to write JavaScript code, the chance of it works as intended is very little for me. Without google dev tools and the help from others, this project won’t be existing. I will come back to it later.
-<br>
+
+- <p>when I need to write JavaScript code, the chance of it works as intended is very little for me. Without google dev tools and the help from others, this project won’t be existing. I will come back to it later.</p>
+
 <br>
 
 ------
@@ -133,6 +134,8 @@ Google dev tools became my first choice for testing purposes. I use it on a dail
 
 - [Google Fonts](https://fonts.google.com/) for selecting the fonts for the project. I choose [Architects Daughter](https://fonts.google.com/specimen/Architects+Daughter?preview.text=step%201:%20choose%20your%20first%20move&preview.text_type=custom), because it looks a little childish and it matches with the type of game and my purpose of bringing back good memories from the childhood.
 
+<img src="assets/images/google-font.png" width="250">
+
 - [Font Color](https://mycolor.space/?hex=%23000000&sub=1) I used colorspace to pick the Small Switch Palette, which in my opinion is nice and simple, goes well with the playful background. The CSS code for background color is also generated from this website.
 
 <img src="assets/images/colorspace.png" width="250">
@@ -148,9 +151,9 @@ Google dev tools became my first choice for testing purposes. I use it on a dail
 <img src="assets/images/gameplay-icon3.png" width="150">
 
 - [Soda PDF](https://www.sodapdf.com/?mkey1=sodapdf.com%2Fjpg-to-png%2F) for converting logos and computer choice images from .jpg into .png, so the white background can be removed and look better with any backgrounds.
-<p>Before:</p> <img src="assets/images/rsp-logo-v2.png" width="200"> 
-<p>After:</p>
-<img src="assets/images/logo-v4.png" width="200">
+  <p>Before:</p> <img src="assets/images/rsp-logo-v2.png" width="200"> 
+  <p>After:</p>
+  <img src="assets/images/logo-v4.png" width="200">
 
 - [W3C Markup Validator](https://validator.w3.org/#validate_by_input) for validate HTML code
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) for validate CSS code
