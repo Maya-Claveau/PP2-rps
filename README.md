@@ -110,11 +110,12 @@
 
 - **JavaScript**
 <p>JavaScript validation was tough, the first try gave me 24 warnings, and I almost had a heart attack.</p>
-<img src="assets/images/js-validation-warnings.png" width="600">
+
+<img src="assets/images/js-validation-warnings.png" width="400">
 
 <p>Since the majority of the warnings are related to “let”, I assume it is not a big deal. With the help of fellow students on Slack, I managed to remove them. Now I have only one warnings left to deal with</p>
 
-<img src="assets/images/js-validation-warnings2.png" width="600">
+<img src="assets/images/js-validation-warnings2.png" width="500">
 
 <p>After some research online and discussion with fellow student, I had better understanding of the issue, however I didn’t manage to fix it, which left me with no choice but to leave it here. Good thing is that it is a warning, not an error. So here is the final validation for JavaScript:</p>
 
@@ -146,9 +147,7 @@
 
 - [Font Awesome](https://fontawesome.com/) for the game play icons
 
-<img src="assets/images/gameplay-icon1.png" width="100">
-<img src="assets/images/gameplay-icon2.png" width="100">
-<img src="assets/images/gameplay-icon3.png" width="100">
+<img src="assets/images/gameplay-icon1.png" width="100"> <img src="assets/images/gameplay-icon2.png" width="100"> <img src="assets/images/gameplay-icon3.png" width="100">
 
 - [Soda PDF](https://www.sodapdf.com/?mkey1=sodapdf.com%2Fjpg-to-png%2F) for converting logos and computer choice images from .jpg into .png, so the white background can be removed and look better with any backgrounds.
   <p>Before:</p> <img src="assets/images/rsp-logo-v2.png" width="200"> 
@@ -161,8 +160,7 @@
 
 - [Balsamiq](https://balsamiq.com/) for creating the wireframes
 
-<img src="wireframes/wireframe-mobile-version.png" width="150">
-<img src="wireframes/wireframe-desktop-version.png" width="250">
+<img src="wireframes/wireframe-mobile-version.png" width="150"> <img src="wireframes/wireframe-desktop-version.png" width="250">
 
 ------
 
