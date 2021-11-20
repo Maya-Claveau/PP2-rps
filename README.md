@@ -24,7 +24,7 @@
 <p>First thing you see when you land on the website is the logo on the top left side with the title Rock, Paper, Scissors below it. Followed by the instructions of the game.</p> 
 
 <br>
-<img src="assets/images/landing-page1.png" width="800">
+<img src="assets/images/desktop-v-final.png" width="800">
 <br>
 
 <p>By clicking the rule button, you will see the game rules in popup window.</p>
