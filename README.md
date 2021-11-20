@@ -192,7 +192,11 @@ The published link will be generated for live view, it can be found [here](https
 
 <img src="assets/images/gameover-bug.png" width="200">
 
-<p>I tried to disable the option buttons after round 7 and display none on the buttons after round 7, but didn’t manage to make it work. With the hope to get some help on a Friday evening, I for the first time jumped in with a call on Slack, luckily I found Sensei Bim there, with his help this issue was not an issue anymore. One small thing I have to note, is that when the game is over, the option buttons are clickable and the image of the computer's choice is still changing, but the scores and round number doesn't change. Due to the time constring, I didn’t manage to fix it. Other than that, the game works just fine.<p>
+<p>I tried two different methods, i) to disable the option buttons after round 7, and ii) display none on the buttons after round 7, but didn’t manage to make it work. Below images are the code I tried with for one of the method</p>
+
+<img src="assets/images/disable-option-btn-attep1-css.png" width="200"> <img src="assets/images/disable-option-btn-attep1-js1.png" width="200"> <img src="assets/images/disable-option-btn-attep1-js2.png" width="200">
+
+<p>With the hope to get some help on a Friday evening, I for the first time jumped in with a call on Slack, luckily I found Sensei Bim there, with his help this issue was not an issue anymore. One small thing I have to note, is that when the game is over, if the player click on the option buttons, the image of the computer's choice is still changing, HOWEVER the scores and round number doesn't change, therefore it doesn't really affect the result of the game. Due to the time constring, I didn’t manage to fix it. Other than that, the game works just fine.<p>
 
 ------
 ## **Difficulties that I manage to overcome**

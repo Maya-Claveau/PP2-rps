@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
-            if (disableBtn) {
+            if (button.disabled === true) {
+                return 
+            } else if (disableBtn) {
                 let player = this.getAttribute("data-type");
                 let computer = displayRandomImage();
                 checkWinner(player, computer);
@@ -96,15 +98,16 @@ function playGame() {
     document.getElementById("round-number").innerText = 0;
     document.getElementById("result").innerText = "";
     disableBtn = true;
+    document.getElementById('btn-rock').disabled = false;
+    document.getElementById('btn-paper').disabled = false;
+    document.getElementById('btn-scissors').disabled = false;
 }
 
 /**
  *  check who wins
  */
 function checkWinner(player, computer) {
-    if (player === computer) {
-        alert(`It's a tie! Please try again!`);
-    } else if (player == "rock") {
+    if (player == "rock") {
         if (computer == "paper") {
             incrementPcScore();
         } else {
@@ -173,6 +176,9 @@ function gameOver() {
     let computerScore = previousPcScore;
 
     if (playerScore > computerScore) {
+        document.getElementById('btn-rock').disabled = true;
+        document.getElementById('btn-paper').disabled = true;
+        document.getElementById('btn-scissors').disabled = true;
         document.getElementById("result").innerText = "Congratulations! You won the game!";
     } else if (playerScore < computerScore) {
         document.getElementById("result").innerText = "You lost the game!";

@@ -41,13 +41,20 @@ h1 {
     margin-bottom: 20px;
 }
 
+ol.instruction-list {
+    list-style-position: inside;
+    margin: 10px;
+    list-style-type: square;
+    text-align: left;
+}
+
 #game-rule-btn {
     background-color: #7273A3;
     border-radius: 10px;
     font-size: inherit;
     font-family: inherit;
     color: inherit;
-    width: 65px;    
+    width: 65px;
 }
 
 .modal {
@@ -56,13 +63,13 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
-    border: 1px solid balck;
+    border: 1px solid #785369;
     border-radius: 10px;
     z-index: 10;
-    background-color: white;
+    background-color: #EEFCFA;
     width: 500px;
     max-width: 80%;
-    color: black;
+    color: #785369;
 }
 
 .modal.active {
@@ -70,7 +77,11 @@ h1 {
 }
 
 .modal-header {
-    margin-left: 90%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid darkslategray;
 }
 
 .modal-header .close-button {
@@ -80,14 +91,16 @@ h1 {
     background: none;
     font-size: 1.25rem;
     font-weight: bold;
+    color: #785369;
 }
 
 .modal-body {
     padding: 10px 15px;
 }
 
-.modal-body li {
-    list-style: none;
+.modal-body ul {
+    list-style-position: inside;
+    margin: 10px;
 }
 
 #overlay {
@@ -220,6 +233,10 @@ footer {
         font-size: 180%;
     }
 
+    ol.instruction-list {
+        margin: 30px;
+    }
+
     .game-area {
         font-size: 240%;
         margin-top: 80px;
@@ -274,6 +291,18 @@ footer {
 
     .instruction-area {
         font-size: 150%;
+    }
+
+    ol.instruction-list {
+        margin: 30px;
+        text-align: center;
+        list-style-position: inside;
+    }
+
+    .modal-body ul {
+        list-style-position: inside;
+        margin-left: 30px;
+        text-align: initial;
     }
 
     .game-area {
