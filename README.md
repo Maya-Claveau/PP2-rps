@@ -71,19 +71,19 @@
 - <p>the page went through major development progress as I was building it, my initial idea wasn't complete, and there are things I didn't consider. As I worked on it, more ideas came to my mind, with the help of fellow students on slack, my mentor, finally the website looked like a little more proper gaming site than what I had originally planned.</p> 
 
 <br>
-<img src="assets/images/mob-v1.png" width="400">
+<img src="assets/images/mob-v1.png" width="200">
 <br>
 
 <br>
-<img src="assets/images/mob-v2.png" width="400">
+<img src="assets/images/mob-v2.png" width="200">
 <br>
 
 <br>
-<img src="assets/images/mob-v2-2.png" width="400">
+<img src="assets/images/mob-v2-2.png" width="200">
 <br>
 
 <br>
-<img src="assets/images/desktop-v2-2.png" width="800">
+<img src="assets/images/desktop-v2-2.png" width="400">
 <br>
 
 - <p>when I need to write JavaScript code, the chance of it works as intended is very little for me. Without google dev tools and the help from others, this project won’t be existing. I will come back to it later.</p>
@@ -146,9 +146,9 @@
 
 - [Font Awesome](https://fontawesome.com/) for the game play icons
 
-<img src="assets/images/gameplay-icon1.png" width="150">
-<img src="assets/images/gameplay-icon2.png" width="150">
-<img src="assets/images/gameplay-icon3.png" width="150">
+<img src="assets/images/gameplay-icon1.png" width="100">
+<img src="assets/images/gameplay-icon2.png" width="100">
+<img src="assets/images/gameplay-icon3.png" width="100">
 
 - [Soda PDF](https://www.sodapdf.com/?mkey1=sodapdf.com%2Fjpg-to-png%2F) for converting logos and computer choice images from .jpg into .png, so the white background can be removed and look better with any backgrounds.
   <p>Before:</p> <img src="assets/images/rsp-logo-v2.png" width="200"> 
@@ -192,7 +192,7 @@ The published link will be generated for live view, it can be found [here](https
 
 <p> Thanks to the peer-code-review channel on Slack, a fellow student pointed out that there is a bug. When the game is over, you can still click the option buttons, the round number won’t change, but the scores for both player and computer will still increment.</p>
 
-<img src="assets/images/gameover-bug.png" width="400">
+<img src="assets/images/gameover-bug.png" width="200">
 
 <p>I tried to disable the option buttons after round 7 and display none on the buttons after round 7, but didn’t manage to make it work. With the hope to get some help on a Friday evening, I for the first time jumped in with a call on Slack, luckily I found Sensei Bim there, with his help this issue was not an issue anymore. One small thing I have to note, is that when the game is over, the option buttons are clickable and the image of the computer's choice is still changing, but the scores and round number doesn't change. Due to the time constring, I didn’t manage to fix it. Other than that, the game works just fine.<p>
 
