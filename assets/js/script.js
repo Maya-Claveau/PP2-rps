@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (button.disabled === true) {
-                return 
+                return
             } else if (disableBtn) {
                 let player = this.getAttribute("data-type");
                 let computer = displayRandomImage();

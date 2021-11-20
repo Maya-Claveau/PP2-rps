@@ -30,7 +30,7 @@
 <p>By clicking the rule button, you will see the game rules in popup window.</p>
 
 <br>
-<img src="assets/images/landing-page-popup.png" width="800">
+<img src="assets/images/desktop-v-popup-final.png" width="800">
 <br> 
 
 <p>Then you will come to the game area where the number of rounds are showing, so you know how many are left until the game is over.</p>
@@ -113,13 +113,13 @@
 
 <img src="assets/images/js-validation-warnings.png" width="400">
 
-<p>Since the majority of the warnings are related to “let”, I assume it is not a big deal. With the help of fellow students on Slack, I managed to remove them. Now I have only one warnings left to deal with</p>
+<p>Since the majority of the warnings are related to “let”, I assume it is not a big deal. With the help of fellow students on Slack, I managed to remove them. Now I have only two warnings left to deal with</p>
 
-<img src="assets/images/js-validation-warnings2.png" width="500">
+<p>The first warning, I discovered that if I put semicolon, the disabled button function won't work, if I remove the semicolon, it works. Due to the time constring, I have no time to look further into it. So I just keep whichever would make the game work.</p>
 
-<p>After some research online and discussion with fellow student, I had better understanding of the issue, however I didn’t manage to fix it, which left me with no choice but to leave it here. Good thing is that it is a warning, not an error. So here is the final validation for JavaScript:</p>
+<p>After some research online and discussion with fellow student, I had better understanding of the 2nd warning, however I didn’t manage to fix it, which left me with no choice but to leave it here. Good thing is that it is a warning, not an error. So here is the final validation for JavaScript:</p>
 
-<img src="assets/images/js-validation-final.png" width="800">
+<img src="assets/images/js-validation-warnings-final.png" width="800">
 
 ------
 
@@ -188,28 +188,37 @@ The published link will be generated for live view, it can be found [here](https
 <p> I tried to fix the JavaScript warning, fellow student and mentor on Slack suggested using “const” and “foreach()” loop. I managed to remove the warning from JSHint, but the game function doesn’t work anymore. So I ended up switching back to the code that works for the game but with the warning message.
 </p>
 
-<p> Thanks to the peer-code-review channel on Slack, a fellow student pointed out that there is a bug. When the game is over, you can still click the option buttons, the round number won’t change, but the scores for both player and computer will still increment.</p>
-
-<img src="assets/images/gameover-bug.png" width="200">
-
-<p>I tried two different methods, i) to disable the option buttons after round 7, and ii) display none on the buttons after round 7, but didn’t manage to make it work. Below images are the code I tried with for one of the method</p>
-
-<img src="assets/images/disable-option-btn-attep1-css.png" width="200"> <img src="assets/images/disable-option-btn-attep1-js1.png" width="200"> <img src="assets/images/disable-option-btn-attep1-js2.png" width="200">
-
-<p>With the hope to get some help on a Friday evening, I for the first time jumped in with a call on Slack, luckily I found Sensei Bim there, with his help this issue was not an issue anymore. One small thing I have to note, is that when the game is over, if the player click on the option buttons, the image of the computer's choice is still changing, HOWEVER the scores and round number doesn't change, therefore it doesn't really affect the result of the game. Due to the time constring, I didn’t manage to fix it. Other than that, the game works just fine.<p>
-
 ------
 ## **Difficulties that I manage to overcome**
 
-<p>My original idea towards the bottom of the page had no buttons, as I was working on it, I realised I needed one button. At the beginning of the game, it will say "Good Luck". When the game is over, it will change to "Game over" (until this point, the button has no functions, hence not clickable). Then it will change to "Play again", now it will have the function attached to it in order to restart the game. One fellow student pointed out that that’s too many things loading on one button. He also suggested making the button hidden in the beginning, and showing when the game is over. I thought was a great idea, so I tried with “classList.add('is-visible')” and “classList.remove('is-visible')” but it didn’t work.</p>
+1 <p>My original idea towards the bottom of the page had no buttons, as I was working on it, I realised I needed one button. At the beginning of the game, it will say "Good Luck". When the game is over, it will change to "Game over" (until this point, the button has no functions, hence not clickable). Then it will change to "Play again", now it will have the function attached to it in order to restart the game. One fellow student pointed out that that’s too many things loading on one button. He also suggested making the button hidden in the beginning, and showing when the game is over. I thought was a great idea, so I tried with “classList.add('is-visible')” and “classList.remove('is-visible')” but it didn’t work.</p>
 
 <p>After the 2nd mentor session, my mentor suggested using CSS and JS to enable/disable the button. and it worked like a wonder.</p>
 
-<p>This is just one small example, the difficulties I have encountered especially with JavaScript is always intense. The frustration is constant. Out of the 10 functions I have, 7 of them had some help from someone, the code I wrote by myself never works. I had major doubts that I would ever be able to make this game work. Luckily, with the support of my mentor, tutor support and fellow students on Slack, I managed to make it work, and it seems like I will be submitting it before the deadline. No matter the outcome, I just wanted to express my gratitude to everyone that’s helped me on this project. Peace and Love!</p>
+2 <p>Thanks to the peer-code-review channel on Slack, a fellow student pointed out that there is a bug. When the game is over, you can still click the option buttons, the round number won’t change, but the scores for both player and computer will still increment.</p>
 
 <br>
+<img src="assets/images/gameover-bug.png" width="200">
+<br>
+
+<p>I tried two different methods, i) to disable the option buttons after round 7, and ii) display none on the buttons after round 7, but didn’t manage to make it work. Below images are the code I tried with for one of the method</p>
+
+<br>
+<img src="assets/images/disable-option-btn-attep1-css.png" width="200"> <img src="assets/images/disable-option-btn-attep1-js1.png" width="200"> <img src="assets/images/disable-option-btn-attep1-js2.png" width="200">
+<br>
+
+<p>With the hope to get some help on a Friday evening, I for the first time jumped in with a call on Slack, luckily I found Sensei Bim there, with his help this issue was not an issue anymore. One small thing I have to note, is that when the game is over, if the player click on the option buttons, the image of the computer's choice is still changing, HOWEVER the scores and round number doesn't change, therefore it doesn't really affect the result of the game. Due to the time constring, I didn’t manage to fix it. Other than that, the game works just fine.<p>
+
+<p>As I made peace with it, during my last mentor session, my mentor took his time and helped me and solved the issue once for all. And now the options button will be disabled when the game is over, and enabled when the player restarts a new game. Hooray! Millions thanks to my mentor for his support.</p>
+
+<br>
+<img src="assets/images/option-btn-bug-fixed.png" width="200">
+<br>
+
+<p>These are just two examples, the difficulties I have encountered especially with JavaScript is always intense. The frustration is constant. 70% of the functions that I have have had some help from someone, the code I wrote by myself never works. I had major doubts that I would ever be able to make this game work. Luckily, with the support of my mentor, tutor support and fellow students on Slack, I managed to make it work, and it seems like I will be submitting it before the deadline. No matter the outcome, I just wanted to express my gratitude to everyone that’s helped me on this project. Peace and Love!</p>
 
 ------
+
 ## **Credits:**
 
 - Code Institute's [Love Math project](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode)
@@ -224,10 +233,10 @@ The published link will be generated for live view, it can be found [here](https
 
 ------
 ## **Acknowledgments**
-My mentor for continuous and structured feedback.
+My awesome mentor for his continuous and structured feedback and support.
 
 Tutor support at Code Institute. For this project, they helped me a lot, I am really grateful for that.
 
-Fellow students on Slack community for their help and support, is amazing how smart and positive this community is, someone is willing to help at any given time. I am very lucky to study alongside of them.
+Fellow students on the Slack community for their help and support, it is amazing how smart and positive this community is, someone is willing to help at any given time. I am very lucky to study alongside them.
 
-So THANK YOU ALL! Without your help my project wouldn't be as good.
+I can't express enough how grateful I am, So THANK YOU ALL! Without your help my project wouldn't be as good.
